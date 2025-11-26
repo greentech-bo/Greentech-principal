@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cesar Flores Apaza — Green Tech</title>
+  <meta name="description" content="Información de la credencial de Cesar Flores Apaza en Green Tech." />
+  <style>
+    :root{
+      --bg:#0f172a;/* slate-900 */
+      --card:#111827;/* gray-900 */
+      --text:#e5e7eb; /* gray-200 */
+      --muted:#9ca3af; /* gray-400 */
+      --accent:#22c55e; /* green-500 */
+      --shadow: 0 20px 45px rgba(0,0,0,.45);
+      --radius: 20px;
+    }
+
+    html, body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .wrap {
+      max-width: 840px;
+      margin: 24px auto;
+      padding: 24px;
+    }
+
+    .card {
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 18px 20px;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+
+    header img.logo {
+      width: 56px;
+      height: 56px;
+      object-fit: contain;
+      border-radius: 12px;
+      background: #fff;
+      padding: 6px;
+    }
+
+    header .hgroup h1 {
+      font-size: 20px;
+      margin: 0;
+      letter-spacing: .2px;
+    }
+
+    .content {
+      display: grid;
+      gap: 18px;
+      padding: 20px;
+    }
+
+    .avatar img {
+      width: 160px;
+      height: 160px;
+      border-radius: 16px;
+      object-fit: cover;
+      border: 2px solid rgba(255,255,255,.15);
+    }
+
+    .btn {
+      appearance: none;
+      border: 1px solid rgba(255,255,255,.14);
+      background: #0b1224;
+      color: var(--text);
+      padding: 12px 14px;
+      border-radius: 12px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+
+    footer {
+      padding: 14px 20px;
+      border-top: 1px solid rgba(255,255,255,.08);
+      color: var(--muted);
+      font-size: 12px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <header>
+        <img class="logo" alt="Logo Green Tech" src="https://raw.githubusercontent.com/greentech-bo/Credenciales/main/Asset/GREENTECH%20LOGO.png" />
+        <div class="hgroup">
+          <h1>Cesar Flores Apaza</h1>
+          <span>Técnico Eléctrico</span>
+        </div>
+      </header>
+
+      <div class="content">
+        <!-- Foto del trabajador (Imagen predeterminada) -->
+        <div class="avatar">
+          <img src="https://www.w3schools.com/w3images/avatar2.png" alt="Foto de Cesar Flores Apaza" />
+        </div>
+
+        <!-- Información del trabajador -->
+        <p><strong>Código:</strong> GT-888-02</p>
+        <p><strong>Actividad:</strong> Relevamiento de postes eléctricos GREEN TECH-ELFEC</p>
+        <p><strong>Zona:</strong> Cochabamba</p>
+        <p><strong>Supervisor:</strong> Ing. Miguel Angel Soria C.</p>
+        <p><strong>Teléfono Supervisor:</strong> +59165776126</p>
+        <p><strong>Vigencia:</strong> Desde 2025-11-01 hasta 2026-03-30</p>
+
+        <div class="actions">
+          <!-- Botón para volver a la página principal -->
+          <a class="btn" href="index.html">Volver a la página principal</a>
+        </div>
+      </div>
+
+      <footer>
+        <span>Válido únicamente durante el periodo indicado.</span>
+        <span>Última actualización: <time></time></span>
+      </footer>
+    </div>
+  </div>
+
+  <script>
+    // 8. Hora de última actualización (lado del cliente)
+    document.querySelector('footer time').textContent = new Intl.DateTimeFormat('es-BO', {dateStyle:'medium', timeStyle:'short'}).format(new Date());
+  </script>
+</body>
+</html>
