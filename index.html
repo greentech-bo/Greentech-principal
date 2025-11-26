@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Green Tech — Verificación de credenciales</title>
+  <meta name="description" content="Página principal de verificación de credenciales para trabajadores de Green Tech." />
+  <style>
+    :root{
+      --bg:#0f172a;/* slate-900 */
+      --card:#111827;/* gray-900 */
+      --text:#e5e7eb; /* gray-200 */
+      --muted:#9ca3af; /* gray-400 */
+      --accent:#22c55e; /* green-500 */
+      --danger:#ef4444; /* red-500 */
+      --link:#60a5fa; /* blue-400 */
+      --shadow: 0 20px 45px rgba(0,0,0,.45);
+      --radius: 20px;
+    }
+
+    html, body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .wrap {
+      max-width: 840px;
+      margin: 24px auto;
+      padding: 24px;
+    }
+
+    .card {
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 18px 20px;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+      backdrop-filter: blur(2px);
+    }
+
+    header img.logo {
+      width: 56px;
+      height: 56px;
+      object-fit: contain;
+      border-radius: 12px;
+      background: #fff;
+      padding: 6px;
+    }
+
+    header .hgroup {
+      display: flex;
+      flex-direction: column;
+    }
+
+    header .hgroup h1 {
+      font-size: 20px;
+      margin: 0;
+      letter-spacing: .2px;
+    }
+
+    header .hgroup span {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 18px;
+      padding: 20px;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 18px 20px 22px;
+      justify-content: center;
+    }
+
+    .btn {
+      appearance: none;
+      border: 1px solid rgba(255,255,255,.14);
+      background: #0b1224;
+      color: var(--text);
+      padding: 12px 14px;
+      border-radius: 12px;
+      cursor: pointer;
+      font-weight: 600;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn.primary {
+      border-color: rgba(34,197,94,.45);
+      background: linear-gradient(180deg, rgba(34,197,94,.25), rgba(34,197,94,.15));
+    }
+
+    footer {
+      padding: 14px 20px;
+      border-top: 1px solid rgba(255,255,255,.08);
+      color: var(--muted);
+      font-size: 12px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    @media (max-width: 720px) {
+      .content {
+        grid-template-columns: 1fr;
+      }
+
+      .row {
+        grid-template-columns: 1fr;
+      }
+
+      header img.logo {
+        width: 46px;
+        height: 46px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card" role="document" aria-label="Página principal de verificación de credencial">
+      <header>
+        <img class="logo" alt="Logo Green Tech" src="https://raw.githubusercontent.com/greentech-bo/Credenciales/main/Asset/GREENTECH%20LOGO.png" onerror="this.style.display='none'" />
+        <div class="hgroup">
+          <h1>Verificación de Credenciales — Green Tech</h1>
+          <span>Bienvenido a la página principal de verificación de credenciales de Green Tech</span>
+        </div>
+      </header>
+
+      <div class="content">
+        <h2>Selecciona un trabajador para ver los detalles de su credencial</h2>
+        <div class="actions">
+          <!-- Botones de enlace a cada trabajador -->
+          <a class="btn primary" href="trabajador_1.html">Ver Edwin Jhaune Rojas</a>
+          <a class="btn primary" href="trabajador_2.html">Ver Ing. Miguel Angel Soria Castellon</a>
+          <a class="btn primary" href="trabajador_3.html">Ver Percy Soria Castellon</a>
+          <a class="btn primary" href="trabajador_4.html">Ver Cesar Flores Apaza</a>
+          <a class="btn primary" href="trabajador_5.html">Ver Elvis Jhosivaldo Mamani Callahuara</a>
+        </div>
+      </div>
+
+      <footer>
+        <span id="footerValid">Válido únicamente durante el periodo indicado.</span>
+        <span id="lastUpdate">Última actualización: <time></time></span>
+      </footer>
+    </div>
+  </div>
+
+  <script>
+    // 8. Hora de última actualización (lado del cliente)
+    document.querySelector('#lastUpdate time').textContent = new Intl.DateTimeFormat('es-BO', {dateStyle:'medium', timeStyle:'short'}).format(new Date());
+  </script>
+</body>
+</html>
