@@ -6,7 +6,7 @@
   <title>Green Tech — Verificación de credenciales</title>
   <meta name="description" content="Página principal de verificación de credenciales para trabajadores de Green Tech." />
   <style>
-    :root{
+    :root {
       --bg: #0f172a; /* slate-900 */
       --card: #111827; /* gray-900 */
       --text: #e5e7eb; /* gray-200 */
@@ -46,6 +46,7 @@
       gap: 16px;
       padding: 18px 20px;
       border-bottom: 1px solid rgba(255, 255, 255, .08);
+      backdrop-filter: blur(2px);
     }
 
     header img.logo {
@@ -73,10 +74,11 @@
 
     .actions {
       display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
+      flex-direction: column; /* Alineamos los botones en columna */
+      gap: 15px; /* Espacio entre los botones */
       margin: 18px 20px 22px;
       justify-content: center;
+      text-align: center; /* Centramos los textos de los botones */
     }
 
     .btn {
@@ -92,6 +94,17 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
+      transition: background-color 0.3s ease; /* Agregar transición */
+    }
+
+    .btn:hover {
+      background-color: var(--accent); /* Cambio de color al pasar el mouse */
+      color: white;
+    }
+
+    /* Color verde para los nombres de los trabajadores */
+    .btn.primary {
+      color: var(--accent); /* Color verde */
     }
 
     footer {
@@ -127,11 +140,10 @@
     }
 
     .elfec-box img {
-      width: 300px;
-      height: 300px;
+      width: 240px; /* Aumentamos el tamaño del logo */
+      height: 240px;
       object-fit: contain;
     }
-
   </style>
 </head>
 <body>
@@ -149,7 +161,7 @@
       <div class="content">
         <h2>Selecciona un trabajador para ver los detalles de su credencial</h2>
         <div class="actions">
-          <!-- Botones de enlace a cada trabajador -->
+          <!-- Botones de enlace a cada trabajador, alineados en columna y con texto verde -->
           <a class="btn primary" href="trabajador_1.html">Edwin Jhaune Rojas</a>
           <a class="btn primary" href="trabajador_2.html">Ing. Miguel Angel Soria Castellon</a>
           <a class="btn primary" href="trabajador_3.html">Percy Soria Castellon</a>
@@ -178,7 +190,8 @@
     document.querySelector('#lastUpdate time').textContent = new Intl.DateTimeFormat('es-BO', {dateStyle: 'medium', timeStyle: 'short'}).format(new Date());
   </script>
 </body>
-</html>
+</html></html>
+
 
 
 
